@@ -47,3 +47,8 @@ variable "schedule_expression" {
   description = "(Required, if event_pattern isn't specified) Scheduling expression for triggering the Lambda Function using CloudWatch events. For example, cron(0 20 * * ? *) or rate(5 minutes)."
 }
 
+variable "input" {
+  description = "A key-value map to assign as input to the Lambda function."
+  type        = map(string)
+  default     = {}
+}

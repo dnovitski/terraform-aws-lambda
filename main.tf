@@ -35,6 +35,7 @@ module "event-cloudwatch" {
   name                = lookup(var.event, "name", null)
   name_prefix         = lookup(var.event, "name_prefix", null)
   schedule_expression = lookup(var.event, "schedule_expression", "")
+  input               = lookup(var.event, "input", {})
 }
 
 module "event-dynamodb" {
